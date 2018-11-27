@@ -1,17 +1,21 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-       Car carretje = new Car("black");
+        Pancake[] pancakes = new Pancake[999];
 
-        Scanner s = new Scanner(System.in);
-        String input = s.next();
+        Random rand = new Random();
 
-
-       carretje.setColor(input);
-       System.out.println(carretje.getColor());
+        for (int i = 0; i < 999; i++) {
+            pancakes[i] = new Pancake();
+            pancakes[i].setTemperature(rand.nextInt(200));
+            System.out.println(pancakes[i].getTemperature());
+        }
 
     }
+
+
 }
